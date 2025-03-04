@@ -1,0 +1,10 @@
+package com.ty.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ty.model.Account;
+
+public interface AccountRepository extends JpaRepository<Account, Long> {
+	Account findByAccountNumber(String accountNumber);
+	
+}

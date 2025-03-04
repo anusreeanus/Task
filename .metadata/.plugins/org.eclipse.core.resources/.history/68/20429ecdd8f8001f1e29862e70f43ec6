@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Create Account</title>
+<style>
+.header {
+	background-color: #004a8d;
+	color: white;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 1220px;
+	top: 0;
+	z-index: 1000;
+}
+
+.logo {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.nav-links {
+	display: flex;
+	gap: 2rem;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+}
+</style>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="logo">BANK</div>
+		<nav class="nav-links">
+				<a href="#login">Login</a>
+		</nav>
+	</header>
+	<h1>Create Account</h1>
+	<form th:action="@{/accounts/create}" method="post">
+		<label for="accountNumber">Account Number:</label>
+		<button type="submit">Create Account</button>
+	</form>
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ATM Login</title>
+</head>
+<body>
+    <h2>ATM Login</h2>
+    <form action="/accounts/authenticate" method="post">
+        <label>Account Number:</label>
+        <input type="text" name="accountNumber" required>
+        <br>
+        <label>PIN:</label>
+        <input type="password" name="pin" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <p th:text="${error}" style="color:red;"></p>
+</body>
+</html>

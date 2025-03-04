@@ -1,0 +1,4 @@
+package com.ty.repository;
+public interface AccountRepository extends JpaRepository<Account, Long> {
+	Account findByAccountNumber(String accountNumber);
+}

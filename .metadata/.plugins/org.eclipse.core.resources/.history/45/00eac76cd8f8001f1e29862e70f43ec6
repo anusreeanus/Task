@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Create Account</title>
+<style>
+.header {
+	background-color: #004a8d;
+	color: white;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 1220px;
+	top: 0;
+	z-index: 1000;
+}
+
+.logo {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.nav-links {
+	display: flex;
+	gap: 2rem;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+}
+</style>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="logo">BANK</div>
+		<nav class="nav-links">
+			<a href="" th:href="@{/accounts/about}">Home</a> <a href="#services"
+				th:href="@{/accounts/service}">Services</a> <a href=""
+				th:href="@{/accounts/about1}">About</a> <a href="#contact">Contact</a>
+			<a href="#login">Login</a>
+		</nav>
+	</header>
+	<h1>Create Account</h1>
+	<form th:action="@{/accounts/create}" method="post">
+		<label for="accountNumber">Account Number:</label> <input type="text"
+			id="accountNumber" name="accountNumber" required> <label
+			for="accountHolderName">Account Holder Name:</label> <input
+			type="text" id="accountHolderName" name="accountHolderName" required>
+		<button type="submit">Create Account</button>
+	</form>
+
+
+</body>
+</html>
